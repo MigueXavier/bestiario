@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- O "parent" traz versões compatíveis de tudo e já configura o compilador
+         com -parameters (por isso @PathVariable int id funciona sem repetir o nome). -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.0.0</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.example</groupId>
+    <artifactId>bestiario</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>bestiario</name>
+    <description>AV2 simulado - API REST do Bestiário</description>
+
+    <properties>
+        <java.version>25</java.version>
+    </properties>
+
+    <dependencies>
+        <!-- "Spring Web" no Initializr: controllers, rotas, Tomcat embutido e Jackson (JSON).
+             É a única dependência necessária. No Spring Boot 4 o artefato se chama
+             spring-boot-starter-webmvc (no 3.x era spring-boot-starter-web). -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webmvc</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,165 @@
+/* Variáveis CSS: troque uma cor aqui e ela muda no app inteiro */
+:root {
+  --fundo: #14161c;
+  --superficie: #1f232d;
+  --borda: #2e3442;
+  --texto: #e9ecf2;
+  --suave: #9aa3b5;
+  --destaque: #f2a33a;
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  color: var(--texto);
+  background: var(--fundo);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+/* ---------- Header / abas ---------- */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 24px;
+  background: linear-gradient(90deg, #3b1d1d, #1f232d);
+  border-bottom: 1px solid var(--borda);
+}
+.header h1 { margin: 0; font-size: 1.6rem; }
+.abas { display: flex; gap: 8px; }
+.abas button {
+  padding: 8px 16px;
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--texto);
+  cursor: pointer;
+}
+.abas button.ativa { background: var(--destaque); color: #1a1a1a; border-color: var(--destaque); }
+
+.conteudo { max-width: 1200px; margin: 0 auto; padding: 24px; }
+
+/* ---------- Filtros ---------- */
+.filtros { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
+.filtros input, .filtros select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--borda);
+  background: var(--superficie);
+  color: var(--texto);
+  font-size: 1rem;
+}
+.busca { flex: 1; min-width: 200px; }
+.contagem { color: var(--suave); }
+.aviso { text-align: center; color: var(--suave); padding: 24px; }
+.erro { color: #ff7b7b; }
+
+/* ---------- Q4: Grade e cards ----------
+   auto-fill + minmax: o navegador cria quantas colunas de no mínimo 220px couberem,
+   dividindo o espaço que sobra (1fr). Responsivo sem nenhum media query. */
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--superficie);
+  border: 2px solid var(--borda);
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); }
+.card h2 { margin: 6px 0 10px; font-size: 1.25rem; }
+.card-topo { display: flex; justify-content: space-between; }
+.card-id, .card-raridade, .guilda { color: var(--suave); font-size: 0.85rem; margin: 0; }
+
+/* Q4: destaque por raridade (classe gerada no MonstroCard) */
+.raridade-raro { border-color: #4a8fe0; }
+.raridade-epico { border-color: #a35ee8; }
+.raridade-lendario { border-color: #e8b923; box-shadow: 0 0 12px rgba(232, 185, 35, 0.35); }
+
+.atributos {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 12px;
+  font-size: 0.85rem;
+  color: var(--suave);
+}
+.atributos b { color: var(--texto); float: right; }
+
+/* ---------- Q4: Tags de elemento ----------
+   Nomes de classe gerados por slug() no ElementoTag.jsx (sem acento). */
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { padding: 3px 10px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; color: #fff; }
+.elemento-fogo { background: #e2562b; }
+.elemento-agua { background: #2f80d1; }
+.elemento-planta { background: #3c9a4b; }
+.elemento-eletrico { background: #d9b100; color: #222; }
+.elemento-rocha { background: #8b7350; }
+.elemento-sombra { background: #4b3d66; }
+.elemento-gelo { background: #63c3d6; color: #123; }
+.elemento-vento { background: #7fa7a0; }
+.elemento-dragao { background: #6a3fd1; }
+.elemento-luz { background: #f0d873; color: #333; }
+
+/* ---------- Caçadores ---------- */
+.cacador { cursor: default; }
+.nivel { color: var(--destaque); font-weight: 700; }
+.chip {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--borda);
+  background: var(--fundo);
+  color: var(--texto);
+  cursor: pointer;
+}
+.chip:hover { border-color: var(--destaque); }
+
+/* ---------- Q4: Modal ----------
+   position: fixed + inset: 0 = cobre a tela inteira, mesmo com scroll.
+   Flex com align/justify center centraliza a caixa. */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  padding: 24px;
+}
+.fechar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  color: var(--texto);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.descricao { font-style: italic; }
+.habitat { color: var(--suave); }
+
+/* ---------- Q3a/Q4: Barras de atributo ----------
+   O trilho tem overflow: hidden para a barra interna respeitar o arredondamento. */
+.stat { display: grid; grid-template-columns: 100px 1fr 40px; align-items: center; gap: 8px; margin: 8px 0; }
+.stat-rotulo { font-size: 0.9rem; color: var(--suave); }
+.stat-trilho { height: 10px; background: var(--fundo); border-radius: 999px; overflow: hidden; }
+.stat-barra { height: 100%; background: linear-gradient(90deg, var(--destaque), #e2562b); }
+.stat-valor { text-align: right; font-weight: 700; }

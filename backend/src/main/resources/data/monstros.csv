@@ -1,0 +1,25 @@
+id;nome;elementos;vida;ataque;defesa;magia;resistencia;velocidade;raridade;habitat;descricao
+1;Brasalume;Fogo;78;84;52;60;48;90;Comum;Vulcão de Cinzarra;Pequena salamandra que acende a cauda quando está nervosa.
+2;Aquelônio;Água;110;58;96;64;88;34;Comum;Lagoa Espelhada;Tartaruga paciente que carrega uma poça inteira no casco.
+3;Folhagris;Planta;85;62;70;75;72;55;Comum;Bosque Sussurrante;Camufla-se entre arbustos e só se move à noite.
+4;Voltarrino;Elétrico;60;72;44;88;50;128;Comum;Torres de Ferrugem;Roedor inquieto que descarrega faíscas ao espirrar.
+5;Pedrusco;Rocha;95;92;125;30;60;25;Comum;Pedreira Velha;Confundido com uma pedra comum até alguém tropeçar nele.
+6;Sombrelha;Sombra;70;80;55;96;70;105;Raro;Ruínas de Morvale;Some quando é observada diretamente.
+7;Glacirra;Gelo;82;70;78;92;86;66;Raro;Picos de Alvor;Congela o ar ao redor quando canta.
+8;Ventaldo;Vento;68;74;50;70;58;132;Comum;Planalto dos Moinhos;Ave veloz que nunca pousa no mesmo lugar duas vezes.
+9;Draconyx;Dragão|Fogo;128;140;110;118;96;98;Lendário;Cratera do Juramento;Dizem que seu rugido reacende vulcões adormecidos.
+10;Marelúmen;Água|Luz;100;60;82;112;120;74;Épico;Costa das Lanternas;Ilumina o fundo do mar para guiar barcos perdidos.
+11;Espinhoco;Planta|Sombra;76;96;88;58;64;62;Raro;Pântano Cinzento;Seus espinhos absorvem a luz ao redor.
+12;Trovânio;Elétrico|Vento;90;104;66;116;72;124;Épico;Céu de Trovoada;Nasce dentro de nuvens carregadas.
+13;Cristalux;Luz|Rocha;105;78;138;102;110;40;Épico;Cavernas Prismáticas;Refrata a luz em sete cores ao se defender.
+14;Necrobuz;Sombra;88;118;72;108;80;94;Épico;Cemitério de Sinos;Coruja que só pia à meia-noite.
+15;Fumarola;Fogo|Rocha;112;106;118;54;68;38;Raro;Vulcão de Cinzarra;Expele fumaça quente pelas costas quando dorme.
+16;Nevasco;Gelo|Vento;84;90;64;98;74;116;Raro;Picos de Alvor;Traz nevascas repentinas por onde passa.
+17;Lumicórnio;Luz;115;96;90;130;124;102;Lendário;Clareira Dourada;Aparece apenas para quem nunca mentiu.
+18;Abismora;Água|Sombra;120;112;84;100;92;70;Épico;Fossa de Nereu;Vive no ponto mais fundo do oceano.
+19;Raizgorda;Planta|Rocha;135;88;120;44;98;22;Raro;Bosque Sussurrante;Fica tão parado que árvores crescem sobre ele.
+20;Faiscol;Elétrico;55;66;48;80;52;110;Comum;Torres de Ferrugem;Vive em bandos que piscam em sincronia.
+21;Wyrmgélido;Dragão|Gelo;134;132;116;124;108;86;Lendário;Geleira Eterna;Dorme há séculos sob o gelo da geleira.
+22;Solarion;Luz|Fogo;98;110;76;126;88;112;Épico;Templo do Meio-Dia;Brilha mais forte ao meio-dia.
+23;Tempestrix;Vento|Dragão;118;126;92;110;90;138;Lendário;Céu de Trovoada;Cria furacões com um bater de asas.
+24;Lodovisk;Água|Planta;102;74;92;68;96;46;Comum;Pântano Cinzento;Coberto de musgo, adora dias de chuva.
